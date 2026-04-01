@@ -1,7 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=30&duration=3000&pause=1000&color=4A9EFF&center=true&vCenter=true&width=700&lines=🛡️+The+Sentinel+Shield;Near-Earth+Object+Classifier;Planetary+Defense+Through+ML" alt="Typing SVG" />
-
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=16&duration=3000&pause=1000&color=4A9EFF&center=true&vCenter=true&width=800&lines=🚀+The+Sentinel+Shield|Near-Earth+Object+Classifier|Planetary+Defense+Through+ML)
 <br/>
 
 ![Python](https://img.shields.io/badge/Python-3.10+-1a1a2e?style=for-the-badge&logo=python&logoColor=4A9EFF&labelColor=0d1b2a)
