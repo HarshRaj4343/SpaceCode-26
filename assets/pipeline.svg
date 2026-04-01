@@ -1,0 +1,99 @@
+<svg viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d1b2a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2044;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e1a5e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0d3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2a1f;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a2a0d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a1a00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a0d1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a000d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4a9eff" />
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect width="900" height="200" fill="url(#bg)" rx="12"/>
+  <!-- Stars -->
+  <circle cx="50" cy="20" r="1" fill="white" opacity="0.6"/>
+  <circle cx="120" cy="45" r="0.8" fill="white" opacity="0.4"/>
+  <circle cx="850" cy="30" r="1" fill="white" opacity="0.5"/>
+  <circle cx="780" cy="160" r="0.8" fill="white" opacity="0.3"/>
+  <circle cx="450" cy="15" r="1" fill="white" opacity="0.5"/>
+
+  <!-- Step 1: Raw Data -->
+  <rect x="20" y="60" width="130" height="80" rx="10" fill="url(#g1)" stroke="#4a9eff" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="85" y="85" text-anchor="middle" fill="#4a9eff" font-size="18">🌌</text>
+  <text x="85" y="105" text-anchor="middle" fill="#a0c8ff" font-size="10" font-weight="bold">RAW NEO</text>
+  <text x="85" y="120" text-anchor="middle" fill="#a0c8ff" font-size="10">DATASET</text>
+  <text x="85" y="132" text-anchor="middle" fill="#6090c0" font-size="8">1950–2025</text>
+
+  <!-- Arrow 1 -->
+  <line x1="152" y1="100" x2="178" y2="100" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: EDA -->
+  <rect x="180" y="60" width="130" height="80" rx="10" fill="url(#g2)" stroke="#b06aff" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="245" y="85" text-anchor="middle" fill="#b06aff" font-size="18">🔭</text>
+  <text x="245" y="105" text-anchor="middle" fill="#d0a0ff" font-size="10" font-weight="bold">EXPLORATORY</text>
+  <text x="245" y="120" text-anchor="middle" fill="#d0a0ff" font-size="10">ANALYSIS</text>
+  <text x="245" y="132" text-anchor="middle" fill="#9060c0" font-size="8">EDA + Correlations</text>
+
+  <!-- Arrow 2 -->
+  <line x1="312" y1="100" x2="338" y2="100" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Preprocessing -->
+  <rect x="340" y="60" width="130" height="80" rx="10" fill="url(#g3)" stroke="#4affa0" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="405" y="85" text-anchor="middle" fill="#4affa0" font-size="18">⚙️</text>
+  <text x="405" y="105" text-anchor="middle" fill="#a0ffc8" font-size="10" font-weight="bold">PREPROCESSING</text>
+  <text x="405" y="120" text-anchor="middle" fill="#a0ffc8" font-size="10">+ SMOTE</text>
+  <text x="405" y="132" text-anchor="middle" fill="#60c090" font-size="8">Class Balancing</text>
+
+  <!-- Arrow 3 -->
+  <line x1="472" y1="100" x2="498" y2="100" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Model Training -->
+  <rect x="500" y="60" width="130" height="80" rx="10" fill="url(#g4)" stroke="#ffb04a" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="565" y="85" text-anchor="middle" fill="#ffb04a" font-size="18">🤖</text>
+  <text x="565" y="105" text-anchor="middle" fill="#ffd0a0" font-size="10" font-weight="bold">MODEL</text>
+  <text x="565" y="120" text-anchor="middle" fill="#ffd0a0" font-size="10">TRAINING</text>
+  <text x="565" y="132" text-anchor="middle" fill="#c09060" font-size="8">RF / XGB / LR</text>
+
+  <!-- Arrow 4 -->
+  <line x1="632" y1="100" x2="658" y2="100" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Results -->
+  <rect x="660" y="60" width="130" height="80" rx="10" fill="url(#g5)" stroke="#ff4a6a" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="725" y="85" text-anchor="middle" fill="#ff4a6a" font-size="18">🛡️</text>
+  <text x="725" y="105" text-anchor="middle" fill="#ffa0b0" font-size="10" font-weight="bold">SENTINEL</text>
+  <text x="725" y="120" text-anchor="middle" fill="#ffa0b0" font-size="10">RESULTS</text>
+  <text x="725" y="132" text-anchor="middle" fill="#c06070" font-size="8">Recall: 1.00</text>
+
+  <!-- Arrow 5 -->
+  <line x1="792" y1="100" x2="818" y2="100" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Step 6: Simulator -->
+  <rect x="820" y="60" width="60" height="80" rx="10" fill="#1a2a1a" stroke="#00ff88" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="850" y="90" text-anchor="middle" fill="#00ff88" font-size="16">🚀</text>
+  <text x="850" y="110" text-anchor="middle" fill="#80ffb0" font-size="8" font-weight="bold">SIM</text>
+  <text x="850" y="122" text-anchor="middle" fill="#80ffb0" font-size="8">.py</text>
+</svg>

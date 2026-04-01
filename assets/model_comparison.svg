@@ -1,0 +1,104 @@
+<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080d18;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1420;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bar_lr_rec" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2040a0" />
+      <stop offset="100%" style="stop-color:#4a70e0" />
+    </linearGradient>
+    <linearGradient id="bar_rf_rec" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#20a060" />
+      <stop offset="100%" style="stop-color:#40e090" />
+    </linearGradient>
+    <linearGradient id="bar_xgb_rec" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a03020" />
+      <stop offset="100%" style="stop-color:#ff6040" />
+    </linearGradient>
+    <linearGradient id="bar_lr_auc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2040a0" />
+      <stop offset="100%" style="stop-color:#4a70e0" />
+    </linearGradient>
+    <linearGradient id="bar_rf_auc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#20a060" />
+      <stop offset="100%" style="stop-color:#40e090" />
+    </linearGradient>
+    <linearGradient id="bar_xgb_auc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a03020" />
+      <stop offset="100%" style="stop-color:#ff6040" />
+    </linearGradient>
+    <filter id="barglow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="700" height="260" fill="url(#bg3)" rx="14"/>
+
+  <!-- Stars -->
+  <circle cx="650" cy="20" r="1" fill="white" opacity="0.5"/>
+  <circle cx="600" cy="45" r="0.8" fill="white" opacity="0.4"/>
+  <circle cx="50" cy="30" r="1" fill="white" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="350" y="26" text-anchor="middle" fill="#a0c8ff" font-size="12" font-weight="bold" letter-spacing="2">MODEL PERFORMANCE COMPARISON</text>
+
+  <!-- Grid lines -->
+  <line x1="100" y1="50" x2="100" y2="210" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <line x1="100" y1="210" x2="680" y2="210" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  <!-- Vertical grid -->
+  <line x1="244" y1="50" x2="244" y2="210" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="3,3"/>
+  <line x1="388" y1="50" x2="388" y2="210" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="3,3"/>
+  <line x1="532" y1="50" x2="532" y2="210" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="3,3"/>
+  <line x1="676" y1="50" x2="676" y2="210" stroke="#ffffff" stroke-width="0.3" opacity="0.1" stroke-dasharray="3,3"/>
+  <!-- X-axis labels -->
+  <text x="244" y="222" text-anchor="middle" fill="#506080" font-size="8">0.25</text>
+  <text x="388" y="222" text-anchor="middle" fill="#506080" font-size="8">0.50</text>
+  <text x="532" y="222" text-anchor="middle" fill="#506080" font-size="8">0.75</text>
+  <text x="676" y="222" text-anchor="middle" fill="#506080" font-size="8">1.00</text>
+
+  <!-- --- RECALL section --- -->
+  <text x="95" y="72" text-anchor="end" fill="#80a0c0" font-size="9">LOG REG</text>
+  <text x="95" y="100" text-anchor="end" fill="#80a0c0" font-size="9">RAND FOREST</text>
+  <text x="95" y="128" text-anchor="end" fill="#80a0c0" font-size="9">XGBOOST</text>
+
+  <!-- Recall bars: scale: 576px = 1.0, start x=100 -->
+  <!-- LR Recall: ~0.87 → 499px -->
+  <rect x="100" y="58" width="499" height="20" rx="4" fill="url(#bar_lr_rec)" filter="url(#barglow)" opacity="0.85"/>
+  <text x="608" y="73" fill="#7090d0" font-size="9">0.87</text>
+
+  <!-- RF Recall: 1.00 → 576px -->
+  <rect x="100" y="86" width="576" height="20" rx="4" fill="url(#bar_rf_rec)" filter="url(#barglow)" opacity="0.85"/>
+  <text x="682" y="101" fill="#40e090" font-size="10" font-weight="bold">1.00 ★</text>
+
+  <!-- XGB Recall: 0.99 → 570px -->
+  <rect x="100" y="114" width="570" height="20" rx="4" fill="url(#bar_xgb_rec)" filter="url(#barglow)" opacity="0.85"/>
+  <text x="676" y="129" fill="#ff6040" font-size="9">0.99</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="150" x2="690" y2="150" stroke="#304050" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="350" y="163" text-anchor="middle" fill="#506070" font-size="9" letter-spacing="1">── AUC-ROC ──</text>
+
+  <!-- AUC-ROC section -->
+  <text x="95" y="183" text-anchor="end" fill="#80a0c0" font-size="9">LOG REG</text>
+  <text x="95" y="203" text-anchor="end" fill="#80a0c0" font-size="9">RAND FOREST</text>
+  <!-- LR AUC: ~0.96 → 553px -->
+  <rect x="100" y="171" width="553" height="16" rx="4" fill="url(#bar_lr_auc)" opacity="0.75"/>
+  <text x="660" y="184" fill="#7090d0" font-size="9">0.960</text>
+
+  <!-- RF AUC: 0.9998 → 576px -->
+  <rect x="100" y="191" width="575" height="16" rx="4" fill="url(#bar_rf_auc)" filter="url(#barglow)" opacity="0.9"/>
+  <text x="680" y="204" fill="#40e090" font-size="9" font-weight="bold">0.9998</text>
+
+  <!-- Legend -->
+  <rect x="110" y="230" width="10" height="10" rx="2" fill="#4a70e0"/>
+  <text x="125" y="239" fill="#80a0c0" font-size="9">Logistic Regression</text>
+  <rect x="270" y="230" width="10" height="10" rx="2" fill="#40e090"/>
+  <text x="285" y="239" fill="#80a0c0" font-size="9">Random Forest ★</text>
+  <rect x="430" y="230" width="10" height="10" rx="2" fill="#ff6040"/>
+  <text x="445" y="239" fill="#80a0c0" font-size="9">XGBoost</text>
+
+  <!-- Section labels on Y axis -->
+  <text x="75" y="95" text-anchor="middle" fill="#a0c8ff" font-size="9" font-weight="bold" transform="rotate(-90, 18, 95)">RECALL</text>
+</svg>
